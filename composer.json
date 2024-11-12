@@ -39,8 +39,13 @@
     }
   },
   "require": {
+<<<<<<< HEAD
     "php": ">=8.2",
     "roots/acorn": "^5.0"
+=======
+    "php": ">=8.1",
+    "roots/acorn": "^4.3"
+>>>>>>> 0733fe3 (installed acorn)
   },
   "require-dev": {
     "laravel/pint": "^1.20"
