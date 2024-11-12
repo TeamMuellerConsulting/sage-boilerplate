@@ -34,7 +34,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('http://example.test')
+    .setProxyUrl('https://bedrock-boilerplate.lndo.site/')
     .watch(['resources/views', 'app']);
 
   /**
