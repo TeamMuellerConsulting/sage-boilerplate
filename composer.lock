@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "81ffa80c3c406958aa209d7d99032e80",
     "packages": [
         {
@@ -5826,6 +5827,23 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pint/zipball/35c00c05ec43e6b46d295efc0f4386ceb30d50d9",
                 "reference": "35c00c05ec43e6b46d295efc0f4386ceb30d50d9",
+=======
+    "content-hash": "d19a636a3d7aaf7ce8276672fcd77be4",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "laravel/pint",
+            "version": "v1.18.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/pint.git",
+                "reference": "cef51821608239040ab841ad6e1c6ae502ae3026"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/cef51821608239040ab841ad6e1c6ae502ae3026",
+                "reference": "cef51821608239040ab841ad6e1c6ae502ae3026",
+>>>>>>> 2b2e52d (theme setup)
                 "shasum": ""
             },
             "require": {
@@ -5836,6 +5854,7 @@
                 "php": "^8.1.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "friendsofphp/php-cs-fixer": "^3.64.0",
                 "illuminate/view": "^10.48.20",
                 "larastan/larastan": "^2.9.8",
@@ -5843,6 +5862,15 @@
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^1.15.1",
                 "pestphp/pest": "^2.35.1"
+=======
+                "friendsofphp/php-cs-fixer": "^3.65.0",
+                "illuminate/view": "^10.48.24",
+                "larastan/larastan": "^2.9.11",
+                "laravel-zero/framework": "^10.4.0",
+                "mockery/mockery": "^1.6.12",
+                "nunomaduro/termwind": "^1.17.0",
+                "pestphp/pest": "^2.36.0"
+>>>>>>> 2b2e52d (theme setup)
             },
             "bin": [
                 "builds/pint"
@@ -5878,7 +5906,11 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
+<<<<<<< HEAD
             "time": "2024-09-24T17:22:50+00:00"
+=======
+            "time": "2024-11-26T15:34:00+00:00"
+>>>>>>> 2b2e52d (theme setup)
         }
     ],
     "aliases": [],
