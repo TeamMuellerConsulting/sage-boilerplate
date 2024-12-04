@@ -1,4 +1,5 @@
 import domReady from '@roots/sage/client/dom-ready';
+import 'flowbite';
 
 /**
  * Application entrypoint

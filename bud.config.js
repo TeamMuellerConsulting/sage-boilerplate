@@ -32,10 +32,22 @@ export default async (app) => {
    * @see {@link https://bud.js.org/reference/bud.setProxyUrl}
    * @see {@link https://bud.js.org/reference/bud.watch}
    */
-  app
-    .setUrl('http://localhost:3000')
-    .setProxyUrl('https://bedrock-boilerplate.lndo.site/')
-    .watch(['resources/views', 'app']);
+  if(process.env.LANDO == 'ON') {
+    app
+      .proxy('http://appserver', [
+        [process.env.WP_URL, process.env.THEME_URL],
+      ])
+      .setPublicUrl(process.env.THEME_URL)
+      .setProxyUrl('http://appserver')
+      .setPublicProxyUrl(process.env.WP_URL)
+      .watch(['resources/views', 'app']);
+  } else {
+    app
+      .setUrl('http://localhost:3000')
+      .setProxyUrl('http://example.test')
+      .watch(['resources/views', 'app']);
+  }
+
 
   /**
    * Generate WordPress `theme.json`
@@ -47,6 +59,7 @@ export default async (app) => {
    */
   app.wpjson
     .setSettings({
+      appearanceTools: true,
       background: {
         backgroundImage: true,
       },
@@ -66,6 +79,10 @@ export default async (app) => {
           'line-height': {},
         },
       },
+      layout: {
+        contentSize: '768px',
+        wideSize: '1280px'
+      },
       spacing: {
         padding: true,
         units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
@@ -74,6 +91,7 @@ export default async (app) => {
         customFontSize: false,
       },
     })
+    .useTailwindSpacing()
     .useTailwindColors()
     .useTailwindFontFamily()
     .useTailwindFontSize();
