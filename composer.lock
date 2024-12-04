@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "81ffa80c3c406958aa209d7d99032e80",
     "packages": [
         {
@@ -2546,18 +2547,54 @@
             "require-dev": {
                 "laravel/pint": "^1.14",
                 "roots/acorn": "^3.0|^4.0"
+=======
+    "content-hash": "20d24d19b91ecc6af9cf1e02c6ba489c",
+    "packages": [
+        {
+            "name": "log1x/navi",
+            "version": "v3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/navi.git",
+                "reference": "97fa923a1eb1aa92d17984117b8e0f56a0a818ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/navi/zipball/97fa923a1eb1aa92d17984117b8e0f56a0a818ab",
+                "reference": "97fa923a1eb1aa92d17984117b8e0f56a0a818ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.14",
+                "roots/acorn": "^4.3"
+>>>>>>> e05d547 (add navi lib)
             },
             "type": "package",
             "extra": {
                 "acorn": {
                     "providers": [
+<<<<<<< HEAD
                         "Log1x\\AcfComposer\\Providers\\AcfComposerServiceProvider"
                     ]
+=======
+                        "Log1x\\Navi\\Providers\\NaviServiceProvider"
+                    ],
+                    "aliases": {
+                        "Navi": "Log1x\\Navi\\Facades\\Navi"
+                    }
+>>>>>>> e05d547 (add navi lib)
                 }
             },
             "autoload": {
                 "psr-4": {
+<<<<<<< HEAD
                     "Log1x\\AcfComposer\\": "src/"
+=======
+                    "Log1x\\Navi\\": "src/"
+>>>>>>> e05d547 (add navi lib)
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2570,10 +2607,22 @@
                     "email": "brandon@tendency.me"
                 }
             ],
+<<<<<<< HEAD
             "description": "Create fields, blocks, option pages, and widgets using ACF Builder and Sage 10",
             "support": {
                 "issues": "https://github.com/Log1x/acf-composer/issues",
                 "source": "https://github.com/Log1x/acf-composer/tree/v3.2.0"
+=======
+            "description": "A developer-friendly alternative to the WordPress NavWalker.",
+            "keywords": [
+                "navwalker",
+                "wordpress",
+                "wordpress-plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/log1x/navi/issues",
+                "source": "https://github.com/Log1x/navi/tree/v3.1.1"
+>>>>>>> e05d547 (add navi lib)
             },
             "funding": [
                 {
@@ -2581,6 +2630,7 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-10-24T12:12:21+00:00"
         },
         {
@@ -5830,6 +5880,11 @@
 =======
     "content-hash": "d19a636a3d7aaf7ce8276672fcd77be4",
     "packages": [],
+=======
+            "time": "2024-10-21T23:10:14+00:00"
+        }
+    ],
+>>>>>>> e05d547 (add navi lib)
     "packages-dev": [
         {
             "name": "laravel/pint",
