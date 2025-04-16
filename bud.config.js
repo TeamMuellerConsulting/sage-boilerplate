@@ -16,7 +16,7 @@ export default async (app) => {
   app
     .entry('app', ['@scripts/app', '@styles/app'])
     .entry('editor', ['@scripts/editor', '@styles/editor'])
-    .assets(['images']);
+    .assets(['images','static',]);
 
   /**
    * Set public path
@@ -80,8 +80,8 @@ export default async (app) => {
         },
       },
       layout: {
-        contentSize: '768px',
-        wideSize: '1280px'
+        contentSize: '1280px',
+        wideSize: '1440px'
       },
       spacing: {
         padding: true,
