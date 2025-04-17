@@ -1250,6 +1250,16 @@
           "color": "#4c0519",
           "name": "Rose 950",
           "slug": "rose-950"
+        },
+        {
+          "color": "#275186",
+          "name": "Primary",
+          "slug": "primary"
+        },
+        {
+          "color": "#fd9813",
+          "name": "Secondary",
+          "slug": "secondary"
         }
       ]
     },
@@ -1261,8 +1271,8 @@
       }
     },
     "layout": {
-      "contentSize": "768px",
-      "wideSize": "1280px"
+      "contentSize": "1280px",
+      "wideSize": "1440px"
     },
     "spacing": {
       "padding": true,
