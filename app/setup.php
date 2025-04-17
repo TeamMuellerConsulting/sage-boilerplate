@@ -26,6 +26,7 @@ add_action('enqueue_block_editor_assets', function () {
     bundle('editor')->enqueue();
 }, 100);
 
+
 /**
  * Register the initial theme setup.
  *
@@ -127,3 +128,32 @@ add_action('widgets_init', function () {
 if (getenv('WP_ENV') === 'development') {
     remove_action('template_redirect', 'redirect_canonical');
 }
+add_action('enqueue_block_editor_assets', function () {
+    wp_enqueue_style('sage/editor-styles', asset('styles/app.css')->uri(), false, null);
+    wp_enqueue_script('flowbite-js', asset('scripts/app.js')->uri(), [], null, true);
+});
+require_once __DIR__ . '/helpers.php';
+
+require_once 'Blocks/flowbite-test.php';
+require_once 'Blocks/hero-section.php';
+require_once 'Blocks/feature-list-icons.php';
+require_once 'Blocks/hero-section-cta.php';
+
+//add Categorie to Gutenberg-Editor for Flowbite-Blocks
+add_filter('block_categories_all', function ($categories) {
+    // Neue Flowbite-Kategorie erstellen
+    $flowbite_category = [
+        'slug'  => 'flowbite-blocks',
+        'title' => __('Flowbite Blöcke', 'sage'),
+        'icon'  => 'layout'
+    ];
+
+    // Flowbite-Kategorie als ERSTE Kategorie im Array setzen
+    array_unshift($categories, $flowbite_category);
+
+    return $categories;
+}, 10, 2);
+
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style('theme-variables', asset('styles/variables.css')->uri(), false, null);
+}, 100);
