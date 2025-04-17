@@ -26,8 +26,8 @@
       }
     },
     "layout": {
-      "contentSize": "768px",
-      "wideSize": "1280px"
+      "contentSize": "1280px",
+      "wideSize": "1440px"
     },
     "spacing": {
       "padding": true,
