@@ -63,3 +63,42 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+
+add_filter('font_awesome_skip_enqueue_kit', '__return_true');
+
+
+
+add_action('wp_ajax_nopriv_ajax_contact_form', 'handle_ajax_contact_form');
+add_action('wp_ajax_ajax_contact_form', 'handle_ajax_contact_form');
+
+function handle_ajax_contact_form() {
+    if (!empty($_POST['website'])) {
+        wp_send_json_error('Spam erkannt.');
+    }
+
+    if (!isset($_POST['_ajax_nonce']) || !wp_verify_nonce($_POST['_ajax_nonce'], 'kontakt_form')) {
+        wp_send_json_error('Ungültige Anfrage (Nonce ungültig).');
+    }
+
+    $name = sanitize_text_field($_POST['name'] ?? '');
+    $email = sanitize_email($_POST['email'] ?? '');
+    $message = sanitize_textarea_field($_POST['message'] ?? '');
+
+    if (!$name || !$email || !$message) {
+        wp_send_json_error('Alle Felder sind Pflicht.');
+    }
+
+    $to = get_option('admin_email');
+    $subject = 'Neue Kontaktanfrage (AJAX)';
+    $body = "Name: $name\nE-Mail: $email\nNachricht:\n$message";
+
+    $sent = wp_mail($to, $subject, $body);
+
+    if ($sent) {
+        wp_send_json_success();
+    } else {
+        wp_send_json_error('E-Mail-Versand fehlgeschlagen.');
+    }
+}
+  
