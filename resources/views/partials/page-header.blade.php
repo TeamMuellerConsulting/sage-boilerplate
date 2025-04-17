@@ -1,3 +1,3 @@
-<div class="page-header">
-  <h1>{!! $title !!}</h1>
-</div>
+{{-- <div class="page-header">
+  <h1 class="text-black dark:text-white">{!! $title !!}</h1>
+</div> --}}
