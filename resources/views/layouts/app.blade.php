@@ -10,30 +10,30 @@
   </head>
 
 <body @php(body_class())>
-  @php(wp_body_open())
+    @php(wp_body_open())
 
-  <div id="app">
-    <a class="sr-only focus:not-sr-only" href="#main">
-      {{ __('Skip to content', 'sage') }}
-    </a>
+    <div id="app">
+        <a class="sr-only focus:not-sr-only" href="#main">
+            {{ __('Skip to content', 'sage') }}
+        </a>
 
-    @include('sections.header')
+        @include('sections.header')
 
-    <main id="main" class="main is-layout-constrained">
-      @yield('content')
-    </main>
+        <main id="main" class="main is-layout-constrained bg-white dark:bg-gray-800">
+            @yield('content')
+            @include('partials.form-contact')
+        </main>
 
-    @hasSection('sidebar')
-    <aside class="sidebar">
-      @yield('sidebar')
-    </aside>
-  @endif
+        @hasSection('sidebar')
+            <aside class="sidebar">
+                @yield('sidebar')
+            </aside>
+        @endif
+        @include('sections.footer')
+    </div>
 
-    @include('sections.footer')
-  </div>
-
-  @php(do_action('get_footer'))
-  @php(wp_footer())
+    @php(do_action('get_footer'))
+    @php(wp_footer())
 </body>
 
 </html>
