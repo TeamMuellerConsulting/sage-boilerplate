@@ -5,9 +5,9 @@
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                 {{ get_field('section_title') }}
             </h2>
-            <p class="mb-4 text-gray-500 sm:text-xl dark:text-gray-400">
-                {{ get_field('section_description') }}
-            </p>
+            <div class="mb-4 text-gray-500 sm:text-xl dark:text-gray-400">
+                {!! get_field('section_description') !!}
+            </div>
             @if (get_field('button_url') && get_field('button_text'))
                 <a href="{{ esc_url(get_field('button_url')) }}"
                     class="inline-flex items-center text-lg font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
