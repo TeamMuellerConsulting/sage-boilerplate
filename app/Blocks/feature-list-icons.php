@@ -30,8 +30,10 @@ add_action('acf/init', function () {
         'key' => 'field_section_description',
         'label' => 'Beschreibung',
         'name' => 'section_description',
-        'type' => 'textarea',
-        'wrapper' => ['width' => 50],
+        'type' => 'wysiwyg',
+        'tabs' => 'visual',
+        'media_upload' => 0, // optional: kein Medien-Upload
+        'delay' => 1, // optional: WYSIWYG-Init verzögern für Performance
       ],
       [
         'key' => 'field_button_text',
