@@ -1,4 +1,4 @@
-<section class="overflow-hidden relative bg-white dark:bg-gray-900 alignfull">
+<section class="overflow-hidden relative bg-white dark:bg-gray-900 align{{ $block['align'] ?? '' }}">
   <div class="relative gap-8 py-8 px-4 mx-auto max-w-screen-xl lg:py-16 xl:grid xl:grid-cols-12">
     <div class="col-span-8">
       <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
