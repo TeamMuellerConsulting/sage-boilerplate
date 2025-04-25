@@ -1,5 +1,5 @@
 @php($bg = get_field('bg_color'))
-<section class="bg-{{ $bg }} alignfull">
+<section class="bg-{{ $bg }} align{{ $block['align'] ?? '' }}">
     <div class="container max-w-screen-xl mx-auto px-4 py-8 sm:py-16 lg:grid xl:grid-cols-3 lg:gap-8 xl:gap-24">
         <div class="mb-8 lg:mb-0">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
