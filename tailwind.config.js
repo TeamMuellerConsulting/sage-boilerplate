@@ -34,6 +34,9 @@ const config = {
       variants: [''],
     },
     {
+      pattern: /^(mt|mb|pt|pb|pl|pr|ml|mr|text|bg|gap|grid|items|justify)-(0|1|2|3|4|5|6|8|10|12|16|20|24|32|40|48|56|64|72|80|96|px)$/,
+    },
+    {
       pattern: /^bg-(primary|secondary)$/,
       variants: ['dark'],
     }    
