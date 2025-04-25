@@ -1,0 +1,25 @@
+@import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+ 
+ 
+@theme {
+    --font-sans: 'Fira Sans', sans-serif;
+    --font-serif: 'EB Garamond', serif;
+    --font-display: 'DM Serif Display', serif;
+    --default-font-family: var(--font-serif);
+   
+    --color-*: initial;
+   
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gray-light: #eaeaea;
+    --color-gray-medium: #8c8c8c;
+    --color-gray-dark: #444444;
+    --color-fg-light: #ffffffcc;
+    --color-fg-dark: #000000cc;
+   
+    --color-primary: blue;
+  }

@@ -1,5 +1,4 @@
-@php($bg = get_field('bg_color'))
-<section class="bg-{{ $bg }} {{ $block['className'] ?? '' }} align{{ $block['align'] ?? '' }}">
+<section class="{{ $block['className'] ?? '' }} align{{ $block['align'] ?? '' }}">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
         @if ($title = get_field('key_stats_title'))
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white lg:text-5xl dark:text-white">

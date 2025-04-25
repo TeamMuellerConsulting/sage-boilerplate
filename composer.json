@@ -20,11 +20,12 @@
     }
   },
   "require": {
-    "php": ">=8.1",
-    "log1x/navi": "^3.1"
+    "log1x/navi": "^3.1",
+    "php": ">=8.2",
+    "roots/acorn": "^5.0"
   },
   "require-dev": {
-    "laravel/pint": "^1.13"
+    "laravel/pint": "^1.20"
   },
   "suggest": {
     "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0)."
@@ -36,11 +37,9 @@
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "extra": {
-    "acorn": {
-      "providers": [
-        "App\\Providers\\ThemeServiceProvider"
-      ]
-    }
+  "scripts": {
+    "post-autoload-dump": [
+      "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+    ]
   }
 }

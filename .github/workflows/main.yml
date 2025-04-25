@@ -25,18 +25,34 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-          cache: 'yarn'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install dependencies using Yarn
-        run: yarn install --frozen-lockfile
+      - name: Install dependencies using npm
+        run: npm install
 
       - name: Build and compile assets
         run: |
-          yarn build
-          cat public/entrypoints.json
-          cat public/manifest.json
+          npm run build
+          cat public/build/manifest.json
+
+      - name: Validate theme.json
+        run: |
+          THEME_JSON="public/build/assets/theme.json"
+
+          if [ ! -f "$THEME_JSON" ]; then
+            echo "❌ theme.json not found"
+            exit 1
+          fi
+
+          jq -e '
+            (.settings.color.palette | length > 0) and
+            (.settings.typography.fontFamilies | length > 0) and
+            (.settings.typography.fontSizes | length > 0)
+          ' "$THEME_JSON" 2>&1 || {
+            echo "❌ Invalid theme.json structure or missing required values"
+            exit 1
+          }
 
   php:
     name: PHP ${{ matrix.php }}
@@ -44,7 +60,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     strategy:
       matrix:
-        php: ['8.1', '8.2']
+        php: ['8.2']
 
     steps:
       - name: Checkout the project
