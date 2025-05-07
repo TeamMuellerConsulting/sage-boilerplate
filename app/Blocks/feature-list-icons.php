@@ -11,20 +11,11 @@ add_action('acf/init', function () {
     'title' => 'Feature List Icons – Einstellungen',
     'fields' => [
       [
-        'key' => 'field_bg_color',
-        'label' => 'Hintergrundfarbe',
-        'name' => 'bg_color',
-        'type' => 'select',
-        
-        'ui' => 1,
-        'default_value' => 'white',
-      ],
-      [
         'key' => 'field_section_title',
         'label' => 'Titel',
         'name' => 'section_title',
         'type' => 'text',
-        'wrapper' => ['width' => 50],
+        
       ],
       [
         'key' => 'field_section_description',
@@ -40,14 +31,14 @@ add_action('acf/init', function () {
         'label' => 'Button-Text',
         'name' => 'button_text',
         'type' => 'text',
-        'wrapper' => ['width' => 50],
+        
       ],
       [
         'key' => 'field_button_url',
         'label' => 'Button-Link',
         'name' => 'button_url',
         'type' => 'url',
-        'wrapper' => ['width' => 50],
+        
       ],
       [
         'key' => 'field_features',
@@ -62,14 +53,14 @@ add_action('acf/init', function () {
             'label' => 'Icon-Klasse (Font Awesome)',
             'name' => 'icon',
             'type' => 'text',
-            'wrapper' => ['width' => 50],
+            
           ],
           [
             'key' => 'field_feature_title',
             'label' => 'Feature-Titel',
             'name' => 'title',
             'type' => 'text',
-            'wrapper' => ['width' => 50],
+            
           ],
           [
             'key' => 'field_feature_description',
@@ -89,7 +80,7 @@ add_action('acf/init', function () {
             'label' => 'Feature-Button-Link',
             'name' => 'feature_button_link',
             'type' => 'url',
-            'wrapper' => ['width' => 50],
+            
           ],
         ],
       ],
@@ -117,6 +108,11 @@ add_action('acf/init', function () {
       'align' => true,
       'mode' => 'auto',
       'jsx' => true,
+      'className' => true,
+      'color' => [
+        'background' => true,
+        'text' => true,
+      ]
     ],
   ]);
 });

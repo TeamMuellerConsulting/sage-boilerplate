@@ -8,15 +8,6 @@ add_action('acf/init', function () {
         'title' => 'Key Stats – Einstellungen',
         'fields' => [
             [
-                'key' => 'field_key_stats_bg_color',
-                'label' => 'Hintergrundfarbe',
-                'name' => 'bg_color',
-                'type' => 'select',
-                
-                'ui' => 1,
-                'default_value' => 'white',
-            ],
-            [
                 'key' => 'field_key_stats_title',
                 'label' => 'Haupttitel',
                 'name' => 'key_stats_title',
@@ -79,6 +70,7 @@ add_action('acf/init', function () {
             'className' => true,
             'color' => [
                 'background' => true,
+                'text' => true,
             ]
         ],
 
