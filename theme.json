@@ -8,13 +8,40 @@
       "backgroundImage": true
     },
     "color": {
-      "custom": false,
+      "custom": true,
       "customDuotone": false,
       "customGradient": false,
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
-      "duotone": []
+      "duotone": [],
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#275186"
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "color": "#e11d48"
+        },
+        {
+          "name": "Gray Light",
+          "slug": "gray-light",
+          "color": "#eaeaea"
+        },
+        {
+          "name": "Gray Medium",
+          "slug": "gray-medium",
+          "color": "#8c8c8c"
+        },
+        {
+          "name": "Gray Dark",
+          "slug": "gray-dark",
+          "color": "#444444"
+        }
+      ]
     },
     "custom": {
       "spacing": {},
