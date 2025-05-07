@@ -24,9 +24,9 @@
 
         @include('sections.header')
 
-        <main id="main" class="main is-layout-constrained bg-white dark:bg-gray-800">
+        <main id="main" class="main is-layout-constrained bg-white">
             @yield('content')
-            @include('partials.form-contact')
+            {{-- @include('partials.form-contact') --}}
         </main>
 
         @hasSection('sidebar')

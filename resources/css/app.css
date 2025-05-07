@@ -9,7 +9,7 @@
     --font-sans: 'Fira Sans', sans-serif;
     --font-serif: 'EB Garamond', serif;
     --font-display: 'DM Serif Display', serif;
-    --default-font-family: var(--font-serif);
+    --default-font-family: var(--font-sans);
    
     --color-*: initial;
    
@@ -21,5 +21,15 @@
     --color-fg-light: #ffffffcc;
     --color-fg-dark: #000000cc;
    
-    --color-primary: blue;
+    --color-primary: #275186;
+    --color-secondary: #e11d48;
   }
+
+  :root :where(.is-layout-constrained) > * {
+    margin-block-start: 0px;
+    margin-block-end: 0;
+}
+
+a{
+  text-decoration: none;
+}
