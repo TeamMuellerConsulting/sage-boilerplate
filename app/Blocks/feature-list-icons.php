@@ -112,7 +112,8 @@ add_action('acf/init', function () {
       'color' => [
         'background' => true,
         'text' => true,
-      ]
+      ],
+      'innerBlocks' => true,
     ],
   ]);
 });
