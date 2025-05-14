@@ -172,6 +172,20 @@ require_once 'Blocks/hero-section-cta.php';
 require_once 'Blocks/key-stats.php';
 require_once 'Blocks/team-grid.php';
 
+
+
+// Custom Post Types
+require_once get_theme_file_path('app/post-types/reference.php');
+
+// Custom Taxonomies
+require_once get_theme_file_path('app/taxonomies/reference-category.php');
+
+// ACF-Felder
+require_once get_theme_file_path('app/fields/reference-fields.php');
+
+require_once 'Blocks/reference-grid.php';
+
+
 //add Categorie to Gutenberg-Editor for Flowbite-Blocks
 add_filter('block_categories_all', function ($categories) {
     // Neue Flowbite-Kategorie erstellen
