@@ -163,7 +163,6 @@ add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_style('sage/editor-styles', asset('styles/app.css')->uri(), false, null);
     wp_enqueue_script('flowbite-js', asset('scripts/app.js')->uri(), [], null, true);
 });
-require_once __DIR__ . '/helpers.php';
 
 require_once 'Blocks/flowbite-test.php';
 require_once 'Blocks/hero-section.php';
@@ -200,7 +199,3 @@ add_filter('block_categories_all', function ($categories) {
 
     return $categories;
 }, 10, 2);
-
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('theme-variables', asset('styles/variables.css')->uri(), false, null);
-}, 100);

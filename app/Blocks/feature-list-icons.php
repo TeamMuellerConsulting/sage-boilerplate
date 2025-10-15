@@ -15,7 +15,6 @@ add_action('acf/init', function () {
         'label' => 'Hintergrundfarbe',
         'name' => 'bg_color',
         'type' => 'select',
-        'choices' => get_theme_colors('acf'),
         'ui' => 1,
         'default_value' => 'white',
       ],
