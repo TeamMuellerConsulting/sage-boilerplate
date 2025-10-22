@@ -25,7 +25,9 @@
     "log1x/navi": "^3.1"
   },
   "require-dev": {
-    "laravel/pint": "^1.20"
+    "friendsofphp/php-cs-fixer": "^3.88",
+    "laravel/pint": "^1.20",
+    "squizlabs/php_codesniffer": "^4.0"
   },
   "suggest": {
     "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0)."
@@ -38,6 +40,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
+    "lint": "phpcs --standard=phpcs.xml",
+    "fix": "php-cs-fixer fix",
     "post-autoload-dump": [
       "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
     ]

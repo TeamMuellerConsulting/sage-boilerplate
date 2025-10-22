@@ -191,7 +191,7 @@ add_filter('block_categories_all', function ($categories) {
     $flowbite_category = [
         'slug'  => 'flowbite-blocks',
         'title' => __('Flowbite Blöcke', 'sage'),
-        'icon'  => 'layout'
+        'icon'  => 'layout',
     ];
 
     // Flowbite-Kategorie als ERSTE Kategorie im Array setzen

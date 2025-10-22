@@ -13,15 +13,31 @@
     "translate:update": "for file in ./resources/lang/*.po; do wp i18n update-po ./resources/lang/sage.pot $file; done",
     "translate:compile": "npm run translate:mo && npm run translate:js",
     "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
-    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
+    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang",
+    "lint:js": "eslint resources/js --ext .js",
+    "lint:fix": "eslint resources/js --ext .js --fix",
+    "lint:css": "stylelint 'resources/**/*.{css,scss}'",
+    "lint:css:fix": "stylelint 'resources/**/*.{css,scss}' --fix",
+    "format": "prettier --write \"resources/**/*.{js,scss,css,blade.php}\"",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
     "@roots/vite-plugin": "^1.0.2",
+    "@stylistic/stylelint-config": "^3.0.1",
+    "@stylistic/stylelint-plugin": "^4.0.0",
     "@tailwindcss/vite": "^4.0.9",
+    "eslint": "^9.37.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "flowbite": "^2.5.2",
+    "husky": "^9.1.7",
     "laravel-vite-plugin": "^2.0.0",
+    "lint-staged": "^16.2.5",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.25.0",
+    "stylelint-order": "^7.0.0",
     "tailwindcss": "^4.0.9",
-    "vite": "^7.0.0",
-    "flowbite": "^2.5.2"
+    "vite": "^7.0.0"
   },
   "dependencies": {
     "imagesloaded": "^5.0.0",

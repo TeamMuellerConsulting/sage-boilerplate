@@ -17,7 +17,7 @@ add_action('acf/init', function () {
                 'align' => true,
                 'mode' => 'auto',
                 'jsx' => true, // Erzwingt, dass der Block in Gutenberg auftaucht
-                "customClassName" => true,
+                'customClassName' => true,
             ],
         ]);
     }
@@ -28,6 +28,6 @@ function render_flowbite_test($block, $content = '', $is_preview = false, $post_
     echo \Roots\view('blocks.flowbite-test', [
         'block' => $block,
         'content' => $content,
-        'is_preview' => $is_preview
+        'is_preview' => $is_preview,
     ])->render();
 }

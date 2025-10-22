@@ -1,0 +1,5 @@
+node_modules
+vendor
+public
+dist
+resources/views/**/*.blade.php

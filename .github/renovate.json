@@ -1,13 +1,8 @@
 {
-  "baseBranchPatterns": [
-    "main"
-  ],
+  "baseBranchPatterns": ["main"],
   "commitMessageAction": "⬆️ Bump",
   "commitMessageTopic": "{{depName}}",
-  "extends": [
-    "config:recommended",
-    "schedule:weekly"
-  ],
+  "extends": ["config:recommended", "schedule:weekly"],
   "rangeStrategy": "replace",
   "ignoreDeps": ["php"],
   "packageRules": [
@@ -26,11 +21,7 @@
       "enabled": false
     },
     {
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin"
-      ],
+      "matchUpdateTypes": ["minor", "patch", "pin"],
       "enabled": true
     }
   ],

@@ -1,10 +1,16 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
-import laravel from 'laravel-vite-plugin'
+import laravel from 'laravel-vite-plugin';
 import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
 
 export default defineConfig({
   base: '/app/themes/sage-boilerplate/public/build/',
+  server: {
+    host: '0.0.0.0',
+    port: 3009,
+    https: false,
+    hmr: { host: 'localhost', protocol: 'ws' },
+  },
   plugins: [
     tailwindcss(),
     laravel({
@@ -35,4 +41,4 @@ export default defineConfig({
       '@images': '/resources/images',
     },
   },
-})
+});

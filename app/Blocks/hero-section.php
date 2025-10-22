@@ -26,6 +26,6 @@ function render_hero_section($block, $content = '', $is_preview = false, $post_i
 {
     echo \Roots\view('blocks.hero-section', [
         'block' => $block,
-        'is_preview' => $is_preview
+        'is_preview' => $is_preview,
     ]);
 }

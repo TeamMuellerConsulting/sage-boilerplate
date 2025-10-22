@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="Sage Theme Coding Standards">
+  <description>PSR-12 ruleset for Sage theme</description>
+  <file>app</file>
+  <file>resources</file>
+  <rule ref="PSR12"/>
+  <exclude-pattern>vendor/*</exclude-pattern>
+</ruleset>

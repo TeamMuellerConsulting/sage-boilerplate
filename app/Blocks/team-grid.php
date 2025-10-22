@@ -12,7 +12,7 @@ add_action('acf/init', function () {
                 'label' => 'Hintergrundfarbe',
                 'name' => 'bg_color',
                 'type' => 'select',
-                
+
                 'ui' => 1,
                 'default_value' => 'white',
             ],
