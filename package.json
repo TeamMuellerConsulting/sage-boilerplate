@@ -19,7 +19,7 @@
     "lint:css": "stylelint 'resources/**/*.{css,scss}'",
     "lint:css:fix": "stylelint 'resources/**/*.{css,scss}' --fix",
     "format": "prettier --write \"resources/**/*.{js,scss,css,blade.php}\"",
-    "prepare": "husky"
+
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",

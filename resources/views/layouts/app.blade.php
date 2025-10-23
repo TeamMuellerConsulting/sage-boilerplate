@@ -25,7 +25,7 @@
         </main>
 
         @hasSection('sidebar')
-            <aside class="sidebar">
+            <aside class="sidebar is-layout-constrained">
                 @yield('sidebar')
             </aside>
         @endif
