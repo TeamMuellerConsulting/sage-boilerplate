@@ -1,2 +1,0 @@
-#!/bin/sh
-lando lint:js && lando lint:css
