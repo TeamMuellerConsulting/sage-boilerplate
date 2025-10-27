@@ -18,7 +18,7 @@
     "lint:fix": "eslint resources/js --ext .js --fix",
     "lint:css": "stylelint 'resources/**/*.{css,scss}'",
     "lint:css:fix": "stylelint 'resources/**/*.{css,scss}' --fix",
-    "format": "prettier --write \"resources/**/*.{js,scss,css,blade.php}\"",
+    "format": "prettier --write \"resources/**/*.{js,scss,css,blade.php}\""
 
   },
   "devDependencies": {
