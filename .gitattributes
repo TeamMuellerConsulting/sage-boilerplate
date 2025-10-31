@@ -1,2 +1,4 @@
 /.gitattributes export-ignore
 /.github export-ignore
+web/app/themes/sage-boilerplate/package.json -text
+*.json text eol=lf
